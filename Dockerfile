@@ -37,4 +37,8 @@ RUN mkdir /opt/osxcross &&                                      \
     ./build_compiler_rt.sh
 
 ENV PATH $PATH:/opt/osxcross/target/bin
+
+COPY darwin_x64.cmake /build/darwin_x64.cmake
+
+
 CMD /bin/bash

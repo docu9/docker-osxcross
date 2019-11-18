@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  osx:
+    environment: 
+      - COIN=yangcoin
+      - REPO=https://github.com/yangcoin/yangcoin
+      - BRANCH=yangcoin
+    image: 'yangcoin/build_osx:1.2'
+    volumes:
+      - ./src:/src
+      - ./sh:/sh
+      - ./deploy:/deploy
+    entrypoint: ["/sh/build.sh"]
+  
+    
